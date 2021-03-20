@@ -1,0 +1,24 @@
+FROM ubuntu:focal 
+
+LABEL maintainer="local" 
+
+RUN apt-get update \
+	&& apt-get install -y software-properties-common \
+	&& apt-get update \
+	&& apt-get install -y curl \
+	&& apt-get install -y libunwind8  \
+	&& apt-get install -y locales
+
+RUN curl -sL https://deb.nodesource.com/setup_14.x | bash - \
+	&& apt-get install -y nodejs \
+	&& npm install npm@latest -g \
+	&& npm install -g autorest@latest \
+	&& locale-gen en_US.UTF-8 
+
+RUN autorest --typescript --allow-no-input  --use=@autorest/typescript@6.0.0-alpha.20210309.1
+
+ENV LANG en_US.UTF-8  
+ENV LANGUAGE en_US:en  
+ENV LC_ALL en_US.UTF-8  
+
+ENTRYPOINT ["autorest"]
