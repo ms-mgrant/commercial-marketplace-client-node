@@ -1,0 +1,7 @@
+# Build directories
+dist/
+esm/
+node_modules/
+review/
+.idea/
+temp/

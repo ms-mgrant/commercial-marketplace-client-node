@@ -1,10 +1,19 @@
 {
   "name": "microsoft.marketplace.metering",
-  "author": "Microsoft Corporation",
+  "author": "Scott Seely",
   "description": "With the commercial marketplace metering service, you can create software as a service (SaaS) and managed application offers which charge according to non-standard units. Before publishing an offer to the commercial marketplace, you define the billing dimensions such as bandwidth, tickets, or emails processed. Customers then pay according to their consumption of these dimensions, with your system informing Microsoft via the commercial marketplace metering service API of billable events.",
   "version": "1.0.0",
-  "dependencies": { "@azure/core-http": "^1.1.4", "tslib": "^1.9.3" },
-  "keywords": ["node", "azure", "typescript", "browser", "isomorphic"],
+  "dependencies": {
+    "@azure/core-http": "^1.1.4",
+    "tslib": "^1.9.3"
+  },
+  "keywords": [
+    "node",
+    "azure",
+    "typescript",
+    "browser",
+    "isomorphic"
+  ],
   "license": "MIT",
   "main": "./dist/microsoft.marketplace.metering.js",
   "module": "./esm/index.js",
@@ -18,12 +27,14 @@
     "@microsoft/api-extractor": "7.9.10",
     "mkdirp": "^1.0.4"
   },
-  "homepage": "https://github.com/Azure/azure-sdk-for-js",
+  "homepage": "https://github.com/microsoft/commercial-marketplace-client-node",
   "repository": {
     "type": "git",
-    "url": "https://github.com/Azure/azure-sdk-for-js.git"
+    "url": "https://github.com/microsoft/commercial-marketplace-client-node.git"
   },
-  "bugs": { "url": "https://github.com/Azure/azure-sdk-for-js/issues" },
+  "bugs": {
+    "url": "https://github.com/microsoft/commercial-marketplace-client-node/issues"
+  },
   "files": [
     "dist/**/*.js",
     "dist/**/*.js.map",

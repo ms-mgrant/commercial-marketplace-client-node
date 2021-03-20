@@ -1,8 +1,8 @@
 {
   "name": "microsoft.marketplace.saas",
-  "author": "Microsoft Corporation",
+  "author": "Scott Seely",
   "description": "This spec details the APIs that enable partners to sell their SaaS applications in the AppSource marketplace and the Azure Marketplace. These APIs are a requirement for transactable SaaS offers on the AppSource and Azure Marketplace.",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "dependencies": {
     "@azure/core-paging": "^1.1.1",
     "@types/chai": "^4.2.15",
@@ -36,13 +36,13 @@
     "typescript": "^3.9.9",
     "uglify-js": "^3.4.9"
   },
-  "homepage": "https://github.com/Azure/azure-sdk-for-js",
+  "homepage": "https://github.com/microsoft/commercial-marketplace-client-node",
   "repository": {
     "type": "git",
-    "url": "https://github.com/Azure/azure-sdk-for-js.git"
+    "url": "https://github.com/microsoft/commercial-marketplace-client-node.git"
   },
   "bugs": {
-    "url": "https://github.com/Azure/azure-sdk-for-js/issues"
+    "url": "https://github.com/microsoft/commercial-marketplace-client-node/issues"
   },
   "files": [
     "dist/**/*.js",
