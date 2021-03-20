@@ -17,7 +17,7 @@ npm install microsoft.marketplace.metering
 
 #### Sample code
 
-Refer the sample code in the [azure-sdk-for-js/samples](https://github.com/Azure/azure-sdk-for-js/tree/master/samples) folder.
+Refer the test code in the [commercial-marketplace-client-node/saas/test](https://github.com/microsoft/commercial-marketplace-client-node/tree/main/saas/test) folder.
 
 ## Related projects
 

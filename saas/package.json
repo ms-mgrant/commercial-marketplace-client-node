@@ -2,7 +2,7 @@
   "name": "microsoft.marketplace.saas",
   "author": "Scott Seely",
   "description": "This spec details the APIs that enable partners to sell their SaaS applications in the AppSource marketplace and the Azure Marketplace. These APIs are a requirement for transactable SaaS offers on the AppSource and Azure Marketplace.",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "dependencies": {
     "@azure/core-paging": "^1.1.1",
     "@types/chai": "^4.2.15",
