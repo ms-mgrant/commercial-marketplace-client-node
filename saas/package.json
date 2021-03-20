@@ -1,0 +1,70 @@
+{
+  "name": "microsoft.marketplace.saas",
+  "author": "Scott Seely",
+  "description": "This spec details the APIs that enable partners to sell their SaaS applications in the AppSource marketplace and the Azure Marketplace. These APIs are a requirement for transactable SaaS offers on the AppSource and Azure Marketplace.",
+  "version": "1.0.1",
+  "dependencies": {
+    "@azure/core-paging": "^1.1.1",
+    "@types/chai": "^4.2.15",
+    "tslib": "^1.9.3"
+  },
+  "keywords": [
+    "node",
+    "azure",
+    "typescript",
+    "browser",
+    "isomorphic"
+  ],
+  "license": "MIT",
+  "main": "./dist/microsoft.marketplace.saas.js",
+  "module": "./esm/index.js",
+  "type": "module",
+  "types": "./esm/index.d.ts",
+  "devDependencies": {
+    "@azure/core-http": "^1.2.3",
+    "@azure/identity": "^1.2.4",
+    "@microsoft/api-extractor": "7.9.10",
+    "@types/mocha": "^8.2.2",
+    "chai": "^4.3.4",
+    "cross-env": "^7.0.3",
+    "mkdirp": "^1.0.4",
+    "mocha": "^8.3.2",
+    "rollup": "^0.66.2",
+    "rollup-plugin-node-resolve": "^3.4.0",
+    "rollup-plugin-sourcemaps": "^0.4.2",
+    "ts-node": "^9.1.1",
+    "typescript": "^3.9.9",
+    "uglify-js": "^3.4.9"
+  },
+  "homepage": "https://github.com/microsoft/commercial-marketplace-client-node",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/microsoft/commercial-marketplace-client-node.git"
+  },
+  "bugs": {
+    "url": "https://github.com/microsoft/commercial-marketplace-client-node/issues"
+  },
+  "files": [
+    "dist/**/*.js",
+    "dist/**/*.js.map",
+    "dist/**/*.d.ts",
+    "dist/**/*.d.ts.map",
+    "esm/**/*.js",
+    "esm/**/*.js.map",
+    "esm/**/*.d.ts",
+    "esm/**/*.d.ts.map",
+    "src/**/*.ts",
+    "README.md",
+    "rollup.config.js",
+    "tsconfig.json"
+  ],
+  "scripts": {
+    "build": "tsc && rollup -c rollup.config.js && npm run minify && mkdirp ./review &&  npm run extract-api",
+    "minify": "uglifyjs -c -m --comments --source-map \"content='./dist/microsoft.marketplace.saas.js.map'\" -o ./dist/microsoft.marketplace.saas.min.js ./dist/microsoft.marketplace.saas.js",
+    "prepack": "npm install && npm run build",
+    "extract-api": "api-extractor run --local",
+    "test": "cross-env TS_NODE_PROJECT=tsconfig.testing.json ./node_modules/.bin/mocha --require ts-node/register ./test/*.ts"
+  },
+  "sideEffects": false,
+  "autoPublish": true
+}
