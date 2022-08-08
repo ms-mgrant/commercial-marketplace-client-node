@@ -442,7 +442,7 @@ export const RecurrentBillingTerm: coreHttp.CompositeMapper = {
         serializedName: "termUnit",
         type: {
           name: "Enum",
-          allowedValues: ["P1M", "P1Y"]
+          allowedValues: ["P1M", "P1Y", "P2Y", "P3Y"]
         }
       },
       termDescription: {

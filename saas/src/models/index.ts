@@ -168,7 +168,7 @@ export type SandboxTypeEnum = "None" | "Csp";
 /** Defines values for SessionModeEnum. */
 export type SessionModeEnum = "None" | "DryRun";
 /** Defines values for TermUnitEnum. */
-export type TermUnitEnum = "P1M" | "P1Y";
+export type TermUnitEnum = "P1M" | "P1Y" | "P2Y" | "P3Y";
 /** Defines values for OperationActionEnum. */
 export type OperationActionEnum =
   | "Unsubscribe"
