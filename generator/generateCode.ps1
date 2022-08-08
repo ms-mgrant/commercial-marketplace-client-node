@@ -44,6 +44,8 @@ if (Test-Path -Path $generated_code_dir -PathType Container)
 
 #return
 
+mkdir ./temp
+
 autorest `
      --typescript `
      .\saas.md `
