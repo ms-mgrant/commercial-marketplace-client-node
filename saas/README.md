@@ -25,10 +25,10 @@ Here is an example of the authorization process from the [sample code](https://g
 
 import * as azureIdentity from "@azure/identity";
 
-let credential = new azureIdentity.ClientSecretCredential(
-    tenantId: process.env.AAD_TENANT_ID || '',
-    clientId: process.env.AAD_APP_CLIENT_ID || '',
-    clientSecret: process.env.AAD_APP_CLIENT_SECRET || ''
+let tokenCredential = new azureIdentity.ClientSecretCredential(
+    process.env.AAD_TENANT_ID || '',
+    process.env.AAD_APP_CLIENT_ID || '',
+    process.env.AAD_APP_CLIENT_SECRET || ''
 );
 
 ```
@@ -38,6 +38,8 @@ let credential = new azureIdentity.ClientSecretCredential(
 Once these credentials are created, you can create a new SaaS API Client.
 
 ```Typescript
+import { SaaSAPI } from 'microsoft.marketplace.saas/src/saaSAPI';
+
 let saasClient = new SaaSAPI(creds); // Use credentials from the last step.
 ```
 &nbsp;
